@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas! 🧾</title>
+</head>
+<body>
+     <h1>Minha Agenda (obs: aperta a tecla f12)</h1>
+
+    <script>
+        // PASSO 1 - Criar o array com os items da sua agenda
+        let minhaAgenda = ["7h - Acordar \n", "7h30 - Tomar café da manhã e se arrumar\n", "8h - Estudar\n", "9h30 - Se arrumar e ir para a academia\n", "11h - Almoçar\n", "14h - Dentista\n", "16h - Aula de Culinária\n", "19h - Reunião da Igreja\n", "21h - Tomar banho, jantar, dormir\n"];
+        console.log(`Agenda: \n\n${minhaAgenda}`);
+        console.log(`O primeiro item da sua agenda é: \n ${minhaAgenda[0]}`);
+
+        // PASSO 2 - Ver quantos vetores tem seu array
+        minhaAgenda.length
+        console.log(`Sua Agenda tem ${minhaAgenda.length} tarefas pendentes`);
+
+        // PASSO 3 - Add mais um item na sua agenda
+        minhaAgenda.push("15h - Buscar sua Irmã no balé\n");
+        console.log(`Agenda ATUALIZADA!\n\n${minhaAgenda}`);
+
+        // PASSO 4 - "Organizar" sua agenda em ordem crescente (obs: em certos pontos fica em ordem crscente mas á uma quebra no meio)
+        minhaAgenda.sort();
+        console.log(`Agenda: \n\n ${minhaAgenda}`);
+
+        // PASSO 5 - Tirar o primeiro item da agenda, como se fosse uma tarefa ja feita
+        minhaAgenda.shift();
+        console.log(`Agenda: \n\n ${minhaAgenda}`);
+
+        // PASSO 6 - Tirar o último item, como se fosse uma desistência daquela tarefa
+        minhaAgenda.pop();
+        console.log(`Agenda: \n\n ${minhaAgenda}`);
+
+        // PASSO 7 - Apagar um item do meio da lista
+        minhaAgenda.splice(4,1); // O primeiro número representado pelo numero '4' é o número do vetor (ex: "21h - Tomar banho, jantar, dormir" está no vetor 4. E o segundo número representado pelo numero '1' é a quantidade de vetores que você quer que apague (ex: se você querer que apague o vetor 4 e mais 3 vetores seguintes, é só substituir o '1' por 3))
+        console.log(`Agenda: \n\n${minhaAgenda}`)
+
+    </script>
+</body>
+</html>
